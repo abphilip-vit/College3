@@ -1,0 +1,58 @@
+A51 MACRO ASSEMBLER  E4T2                                                                 01/07/2020 03:51:24 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+NO OBJECT MODULE REQUESTED
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE E4T2.asm SET(SMALL) DEBUG PRINT(.\Listings\E4T2.lst) OBJECT(.\Objects\E
+                      4T2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 900200            2             MOV DPTR, #200H
+0003 7840              3             MOV R0, #40H
+0005 790E              4             MOV R1, #0EH
+                       5             LOOP CLR A
+*** _________________________________^
+*** ERROR #A9 IN 5 (E4T2.asm, LINE 5): SYNTAX ERROR
+0007 93                6             MOVC A,@ A+DPTR
+0008 F6                7             MOV @R0, A
+0009 08                8             INC R0
+000A A3                9             INC DPTR
+000B                  10             DJNZ R1, LOOP
+*** __________________________________________^
+*** ERROR #A45 IN 10 (E4T2.asm, LINE 10): UNDEFINED SYMBOL (PASS-2)
+000D 7840             11             MOV R0, #40H
+000F 7960             12             MOV R1, #60H
+0011 7B0E             13             MOV R3, #0EH
+0013 E4               14             LOOP2: CLR A
+0014 E6               15             MOV A, @R0
+0015 F7               16             MOV @R1, A
+0016 08               17             INC R0
+0017 09               18             INC R1
+0018 DBF9             19             DJNZ R3, LOOP2
+001A 80FE             20             HERE: SJMP HERE
+0200                  21             ORG 200H
+0200 56495420         22                     DB "VIT UNIVERSITY"
+0204 554E4956                
+0208 45525349                
+020C 5459                    
+                      23             END
+                                     
+A51 MACRO ASSEMBLER  E4T2                                                                 01/07/2020 03:51:24 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   001AH   A   
+LOOP . . . . . . .    ----   -----       
+LOOP2. . . . . . .  C ADDR   0013H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 2 ERROR(S)

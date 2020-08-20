@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  EXP4A                                                                01/07/2020 21:31:38 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp4a.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ..\..\18BIS0108\exp4a.asm SET(SMALL) DEBUG PRINT(.\Listings\exp4a.lst) 
+                      OBJECT(.\Objects\exp4a.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 759055            2     MOV P1,#55H
+0003 7905              3     MOV R1,#05H
+0005 E590              4     HERE: MOV A,P1
+0007 29                5     ADD A,R1
+0008 F5A0              6     MOV P2,A
+000A 80F9              7     SJMP HERE
+                       8     END
+A51 MACRO ASSEMBLER  EXP4A                                                                01/07/2020 21:31:38 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0005H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,56 @@
+A51 MACRO ASSEMBLER  E3T2                                                                 12/16/2019 23:35:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\E3T2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE E3T2.asm SET(SMALL) DEBUG PRINT(.\Listings\E3T2.lst) OBJECT(.\Objects\E
+                      3T2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 900200            2             MOV DPTR,#0200H
+0003 790E              3             MOV R1, #0EH
+0005 7840              4             MOV R0, #40H
+                       5             
+0007 E4                6             ALLEN:CLR A
+0008 93                7                     MOVC A,@A+DPTR
+0009 F6                8                     MOV @R0,A
+000A A3                9                     INC DPTR
+000B 08               10                     INC R0
+000C D9F9             11                     DJNZ R1,ALLEN
+000E 7840             12             MOV R0,#40H
+0010 7960             13             MOV R1,#60H
+0012 7B0E             14             MOV R3,#0EH
+                      15             
+0014 E4               16             ALLEN2: CLR A
+0015 E6               17                     MOV A,@R0
+0016 F7               18                     MOV @R1,A
+0017 09               19                     INC R1
+0018 08               20                     INC R0
+0019 DBF9             21                     DJNZ R3,ALLEN2
+001B 80FE             22             HERE: SJMP HERE
+                      23             
+0200                  24             ORG 0200H
+0200 56495420         25             DB "VIT UNIVERSITY"
+0204 554E4956                
+0208 45525349                
+020C 5459                    
+                      26             END
+A51 MACRO ASSEMBLER  E3T2                                                                 12/16/2019 23:35:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ALLEN. . . . . . .  C ADDR   0007H   A   
+ALLEN2 . . . . . .  C ADDR   0014H   A   
+HERE . . . . . . .  C ADDR   001BH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

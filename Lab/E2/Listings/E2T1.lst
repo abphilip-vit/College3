@@ -1,0 +1,55 @@
+A51 MACRO ASSEMBLER  E2T1                                                                 12/09/2019 23:13:11 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\E2T1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE E2T1.asm SET(SMALL) DEBUG PRINT(.\Listings\E2T1.lst) OBJECT(.\Objects\E
+                      2T1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 000H
+0000 7401              2     MOV A,#01H
+0002 785B              3     MOV R0,#5BH
+0004 28                4     ADD A,R0
+0005 5001              5     JNC L1
+0007 0F                6     INC R7
+                       7     
+0008                   8     L1:
+0008 79EC              9     MOV R1,#0ECH
+000A 29               10     ADD A,R1
+000B 5001             11     JNC L2
+000D 0F               12     INC R7
+                      13     
+000E                  14     L2:
+000E 7A45             15     MOV R2,#45H
+0010 2A               16     ADD A,R2
+0011 5001             17     JNC L3
+0013 0F               18     INC R7
+                      19     
+0014                  20     L3:
+0014 7B99             21     MOV R3,#99H
+0016 2B               22     ADD A,R3
+0017 50FB             23     JNC L3
+0019 0F               24     INC R7
+                      25     
+001A 80FE             26     L4: sjmp L4
+                      27     END
+A51 MACRO ASSEMBLER  E2T1                                                                 12/09/2019 23:13:11 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L1 . . . . . . . .  C ADDR   0008H   A   
+L2 . . . . . . . .  C ADDR   000EH   A   
+L3 . . . . . . . .  C ADDR   0014H   A   
+L4 . . . . . . . .  C ADDR   001AH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

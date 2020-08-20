@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  EXP4                                                                 01/07/2020 21:12:30 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ..\..\18BIS0108\exp4.asm SET(SMALL) DEBUG PRINT(.\Listings\exp4.lst) OB
+                      JECT(.\Objects\exp4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 758055            2     HERE : MOV P0,#55H
+0003 759055            3     MOV P1,#55H
+0006 75A055            4     MOV P2,#55H
+0009 1118              5     ACALL DELAY
+000B 7580AA            6     MOV P0, #0AAH
+000E 7590AA            7     MOV P1,#0AAH
+0011 75A0AA            8     MOV P2,#0AAH
+0014 1118              9     ACALL DELAY
+0016 80E8             10     SJMP HERE
+0018 79C8             11     DELAY : MOV R1,#200
+001A 7AC8             12     BACK: MOV R2,#200
+001C DAFE             13     AGAIN: DJNZ R2,AGAIN
+001E D9FA             14     DJNZ R1,BACK
+0020 22               15     RET 
+                      16     END
+A51 MACRO ASSEMBLER  EXP4                                                                 01/07/2020 21:12:30 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   001CH   A   
+BACK . . . . . . .  C ADDR   001AH   A   
+DELAY. . . . . . .  C ADDR   0018H   A   
+HERE . . . . . . .  C ADDR   0000H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

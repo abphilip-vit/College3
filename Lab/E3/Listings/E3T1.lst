@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  E3T1                                                                 12/16/2019 23:32:52 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\E3T1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE E3T1.asm SET(SMALL) DEBUG PRINT(.\Listings\E3T1.lst) OBJECT(.\Objects\E
+                      3T1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 900200            2             MOV DPTR,#0200H
+0003 790E              3             MOV R1, #0EH
+0005 7840              4             MOV R0, #40H
+                       5             
+0007 E4                6             ALLEN:CLR A
+0008 93                7                     MOVC A,@A+DPTR
+0009 F6                8                     MOV @R0,A
+000A A3                9                     INC DPTR
+000B 08               10                     INC R0
+000C D9F9             11                     DJNZ R1,ALLEN
+000E 80FE             12             HERE: SJMP HERE
+                      13             
+0200                  14             ORG 0200H
+0200 56495420         15             DB "VIT UNIVERSITY"
+0204 554E4956                
+0208 45525349                
+020C 5459                    
+                      16             END
+A51 MACRO ASSEMBLER  E3T1                                                                 12/16/2019 23:32:52 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ALLEN. . . . . . .  C ADDR   0007H   A   
+HERE . . . . . . .  C ADDR   000EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

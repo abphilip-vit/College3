@@ -1,0 +1,31 @@
+A51 MACRO ASSEMBLER  E1T1                                                                 12/02/2019 23:15:20 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\E1T1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE E1T1.asm SET(SMALL) DEBUG PRINT(.\Listings\E1T1.lst) OBJECT(.\Objects\E
+                      1T1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1      ORG 0000H
+0000 7405              2      MOV A,#05H
+0002 75F006            3      MOV B,#06H
+0005 25F0              4      ADD A,B
+                       5      END
+                              
+A51 MACRO ASSEMBLER  E1T1                                                                 12/02/2019 23:15:20 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
